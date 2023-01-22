@@ -149,10 +149,11 @@ img {
 .boton--primario{
     background-color: var(--black);
 }
+
+/**aside**/
 .informacion{
     list-style: none;
 }
-/**aside**/
 .informacion__bold{
     font-family: var(--titles);
     font-weight: 700;
