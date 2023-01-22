@@ -60,7 +60,7 @@ img {
     height: 60rem;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
 }
 .header__text{
     margin-top: 5rem;
@@ -180,6 +180,22 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/**Nosotros.html**/
+
+.sobre-nosotros__imagen{
+    text-align: center;
+}
+@media(min-width: 768px) {
+    .sobre-nosotros{
+        display: flex;
+        gap: 2rem;
+    }
+    .sobre-nosotros__imagen, 
+    .sobre-nosotros__texto{
+        flex-basis: 50%;
+    }
 }
 
 
