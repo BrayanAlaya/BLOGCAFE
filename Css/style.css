@@ -45,6 +45,9 @@ h4 {
 img {
     max-width: 100%;
 }
+p{
+    font-size: 2rem;
+}
 .no-margin {
     margin: 0;
 }
@@ -191,6 +194,29 @@ img {
     .sobre-nosotros{
         display: grid;
         grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+}
+
+/**Cursos.html**/
+
+.curso__imagen{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.curso{
+    padding: 3rem 0 3rem 0;
+    border-bottom: 0.2rem solid black;
+}
+.curso:last-of-type{
+    border: none;
+}
+@media(min-width: 768px) {
+    .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
         gap: 2rem;
     }
 }
