@@ -189,12 +189,9 @@ img {
 }
 @media(min-width: 768px) {
     .sobre-nosotros{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
         gap: 2rem;
-    }
-    .sobre-nosotros__imagen, 
-    .sobre-nosotros__texto{
-        flex-basis: 50%;
     }
 }
 
