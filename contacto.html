@@ -42,21 +42,39 @@
     
         <div class="imagen__bg"></div>
 
-        <form>
+        <form class="Contacto__formulario">
             <div class="campo">
-                <label for="nombre">Nombre</label>
-                <input type="text" placeholder="Tu nombre">
+                <label for="nombre" class="campo__label">Nombre</label>
+                <input 
+                type="text" 
+                placeholder="Tu nombre"
+                id="nombre"
+                class="campo__field"
+                >
             </div>
             <div class="campo">
-                <label for="email">Nombre</label>
-                <input type="email" placeholder="Tu email">
+                <label for="email" class="campo__label">Email</label>
+                <input 
+                type="email" 
+                placeholder="Tu email"
+                id="email"
+                class="campo__field"
+                >
             </div>
             <div class="campo">
-                <label for="Mensaje">Nombre</label>
-                <textarea id="Mensaje" placeholder="ingresar texto"></textarea>
+                <label for="Mensaje" class="campo__label">Mensaje</label>
+                <textarea 
+                id="Mensaje" 
+                placeholder="ingresar texto"
+                class="campo__field campo__field--textarea"
+                ></textarea>
             </div>
             <div class="campo">
-                <input type="submit" class="boton boton--primario">
+                <input 
+                type="submit"
+                value="Enviar" 
+                class="boton boton--primario "
+                >
             </divcl>
         </form>
     </main>

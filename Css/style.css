@@ -232,5 +232,25 @@ p{
     background-repeat: no-repeat;
 }
 
+.Contacto__formulario{
+    width: 90%;
+    margin: -5rem auto 0 auto;
+    background-color: var(--white);
+    padding: 5rem;
+}
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo__label{
+    flex: 0 0 9rem;
+}
+.campo__field{
+    flex: 1;
+}
+.campo__field--textarea{
+    height: 20rem;
+}
+
 
 
