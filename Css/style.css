@@ -238,7 +238,7 @@ p{
 }
 
 .Contacto__formulario{
-    width: 90%;
+    width: 80%;
     margin: -5rem auto 0 auto;
     background-color: var(--white);
     padding: 5rem;
@@ -246,12 +246,14 @@ p{
 .campo{
     display: flex;
     margin-bottom: 2rem;
+
 }
 .campo__label{
     flex: 0 0 9rem;
 }
 .campo__field{
     flex: 1;
+    width: 100%;
 }
 .campo__field--textarea{
     height: 20rem;
