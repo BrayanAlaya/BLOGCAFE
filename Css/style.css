@@ -108,9 +108,8 @@ p{
         
     }
     .navegacion{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        gap: 2rem;    
+        display: flex;
+        gap: 1rem;
     }   
 }
 /**Contenido del blog**/
