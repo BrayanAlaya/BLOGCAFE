@@ -258,5 +258,17 @@ p{
     height: 20rem;
 }
 
+/**Validar fomrulario**/
 
+.error__mensaje{
+    color: white;
+    font-size: 1.5rem;
+    background-color: black;
+    padding: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.error--espacio{
+    height: 4rem;
+}
 
