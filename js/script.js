@@ -38,11 +38,14 @@ const errorNombre = document.createElement("p");
 const errorEmail = document.createElement("p");
 const errorMensaje = document.createElement("p");
 const nombre = document.querySelector("#nombre")
-nombre.addEventListener("input",agregarDatos)
 const email = document.querySelector("#email")
-email.addEventListener("input", agregarDatos)
 const mensaje = document.querySelector("#mensaje")
+
+nombre.addEventListener("input",agregarDatos)
+email.addEventListener("input", agregarDatos)
 mensaje.addEventListener("input", agregarDatos)
+
+
 
 function agregarDatos(e){
     formulario [String(e.target.id)] = String(e.target.value);
@@ -59,16 +62,9 @@ function agregarDatos(e){
         };
     }
     if (contadorIntentos != 0) {
+        const {nombre,email,mensaje} = formulario;
         if (nombre === "" || email === "" || mensaje === "") {
-            if (nombre === "") {
-                mostrarError("Nombre obligatorio",formSend,errorNombre);
-            }
-            if (email === "") {
-                mostrarError("Ingrese el email",formSend,errorEmail);
-            }
-            if (mensaje === "") {
-                mostrarError("Ingrese el mensaje",formSend,errorMensaje);
-            }
+            validado(nombre,email,mensaje)
         }
     }
 }
@@ -81,23 +77,25 @@ formSend.addEventListener("submit",(evento)=>{
     const {nombre,email,mensaje} = formulario;
     if (nombre === "" || email === "" || mensaje === "") {
         contadorIntentos = 1;
-        if (nombre === "") {
-            mostrarError("Nombre obligatorio",formSend,errorNombre);
-        }
-        if (email === "") {
-            mostrarError("Ingrese el email",formSend,errorEmail);
-        }
-        if (mensaje === "") {
-            mostrarError("Ingrese el mensaje",formSend,errorMensaje);
-        }
+        validado(nombre,email,mensaje)
         return;
     }
-    errorNombre.textContent = "Genial pasaste"
-    formSend.appendChild(errorNombre)
+    mostrarError("Genial pasaste",formSend,errorNombre)
 })
 function mostrarError(mensaje,agregar,error){
     error.textContent = mensaje;
     error.classList.add("error__mensaje");
     agregar.appendChild(error);
+}
+function validado(nombre,email,mensaje){
+    if (nombre === "") {
+        mostrarError("Nombre obligatorio",formSend,errorNombre);
+    }
+    if (email === "") {
+        mostrarError("Email obligatorio",formSend,errorEmail);
+    }
+    if (mensaje === "") {
+        mostrarError("mensaje obligatorio",formSend,errorMensaje);
+    }
 }
 
